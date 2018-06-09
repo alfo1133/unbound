@@ -47,18 +47,18 @@ Start your container:
   
 `services:`  
 &nbsp;&nbsp;  `unbound:`  
-&nbsp;&nbsp;  `image: gkweb76/unbound:latest`  
-&nbsp;&nbsp;  `container_name: unbound`  
-&nbsp;&nbsp;  `read_only: yes`  
-&nbsp;&nbsp;  `ports:`  
-&nbsp;&nbsp;&nbsp;&nbsp;  `- "53:53/udp"`  
-&nbsp;&nbsp;&nbsp;&nbsp;  `- "53:53/tcp"`  
-&nbsp;&nbsp;  `networks:`  
-&nbsp;&nbsp;&nbsp;&nbsp;  `- unbound`  
-&nbsp;&nbsp;    `volumes:`   
-&nbsp;&nbsp;&nbsp;&nbsp;      `- unbound:/etc/unbound # stored as /var/lib/docker/volumes/<project_name>_unbound`  
-&nbsp;&nbsp;&nbsp;&nbsp;      `- /etc/localtime:/etc/localtime:ro # keep container clock in sync with host`  
-&nbsp;&nbsp;    `restart: "unless-stopped"`  
+&nbsp;&nbsp;&nbsp;&nbsp;  `image: gkweb76/unbound:latest`  
+&nbsp;&nbsp;&nbsp;&nbsp;  `container_name: unbound`  
+&nbsp;&nbsp;&nbsp;&nbsp;  `read_only: yes`  
+&nbsp;&nbsp;&nbsp;&nbsp;  `ports:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `- "53:53/udp"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `- "53:53/tcp"`  
+&nbsp;&nbsp;&nbsp;&nbsp;  `networks:`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `- unbound`  
+&nbsp;&nbsp;&nbsp;&nbsp;    `volumes:`   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      `- unbound:/etc/unbound # stored as /var/lib/docker/volumes/<project_name>_unbound`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      `- /etc/localtime:/etc/localtime:ro # keep container clock in sync with host`  
+&nbsp;&nbsp;&nbsp;&nbsp;    `restart: "unless-stopped"`  
   
 `# Networks declaration`  
 `networks:`  
