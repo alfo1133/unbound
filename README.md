@@ -10,7 +10,7 @@
 
 
 # Why using this image ?
-This image is a vanilla Unbound software without any additional packages installed. This enables you to run it concurrently on its own or with the DNS encrypting service of your choice (e.g DNSCrypt proxy).  
+This image is a vanilla Unbound software without any additional packages installed. This enables you to run it on its own or concurrently with the DNS encrypting service of your choice (e.g DNSCrypt proxy).  
 
 This image is based on [Alpine Linux](https://alpinelinux.org/) and therefore is built with [LibreSSL](https://www.libressl.org/), which is a more secure fork of OpenSSL made by the [OpenBSD](https://www.openbsd.org/) team. Also Alpine Linux is generally immune to vulnerabilities targetting components not installed in this Operating System, such as: bash (e.g. Shellshock vulnerability), OpenSSL (e.g. Heartbleed vulnerability), glibc (e.g Ghost vulnerability). Also, Alpine Linux has a much smaller image size compared to other OS thanks to less packages installed by default and not relying on glibc, providing faster image download, and reduced attack surface, hence better security.
 
