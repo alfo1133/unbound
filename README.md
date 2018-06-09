@@ -39,7 +39,8 @@ Apply a strict chmod so that only root can modify these files:
 `chmod 644 $UNBOUND_VOLUME_PATH/unbound.conf`  
 
 Start your container:  
-`sudo docker run --rm --name unbound -v unbound:/etc/unbound -p 53:53 gkweb76/unbound`  
+`sudo docker run --rm --name unbound -v unbound:/etc/unbound --read-only=true \`  
+`-p 53:53 gkweb76/unbound`  
 
 # Docker compose example  
 `version: "3.5"`  
