@@ -1,0 +1,26 @@
+# Title : Compose file to setup an Unbound server
+# Command : sudo docker-compose -f compose-unbound.yml -p <project_name> up
+version: "3.5"
+
+services:
+  unbound:
+    image: gkweb76/unbound:1.6.7
+    container_name: unbound
+    read_only: yes
+    ports: # host_ip:host_port:container_port
+      - "53:53/udp"
+      - "53:53/tcp"
+    networks:
+      - unbound
+    volumes:
+      - unbound:/etc/unbound # stored as /var/lib/docker/volumes/<project_name>_unbound
+      - /etc/localtime:/etc/localtime:ro # keep container clock in sync with host
+    restart: "unless-stopped"
+
+# Networks declaration
+networks:
+  unbound:
+
+# Volumes declaration
+volumes:
+  unbound:
