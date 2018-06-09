@@ -73,4 +73,4 @@ If you need help with your compose file, check the official [documentation](http
 
 # License
 
-MIT License
+MIT License  
