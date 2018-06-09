@@ -4,7 +4,7 @@
 
 
 # What is Unbound
-[Unbound](https://unbound.net/) is a caching DNS resolver that can be used on its own, or coupled with DNSCrypt proxy to have both a DNS caching service and encrypted DNS requests.
+[Unbound](https://unbound.net/) is a caching DNS resolver that can be used on its own, or coupled with DNSCrypt proxy to have both a DNS caching service and encrypted DNS requests.  
 ![](https://unbound.net/gx/unbound-250.png)
 
 
