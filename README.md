@@ -56,7 +56,7 @@ Start your container:
 &nbsp;&nbsp;  `networks:`  
 &nbsp;&nbsp;&nbsp;&nbsp;  `- unbound`  
 &nbsp;&nbsp;    `volumes:`   
-&nbsp;&nbsp;&nbsp;&nbsp;      `- unbound:/etc/unbound # stored as /var/lib/docker/volumes/<project_name>_unbound`
+&nbsp;&nbsp;&nbsp;&nbsp;      `- unbound:/etc/unbound # stored as /var/lib/docker/volumes/<project_name>_unbound`  
 &nbsp;&nbsp;&nbsp;&nbsp;      `- /etc/localtime:/etc/localtime:ro # keep container clock in sync with host`  
 &nbsp;&nbsp;    `restart: "unless-stopped"`  
   
