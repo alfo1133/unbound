@@ -1,11 +1,11 @@
 # Base image is Alpine Linux
 # docker build -t gkweb76/unbound:1.6.7 -t gkweb76/unbound:latest -t gkweb76/unbound:1.6.7-r1 .
-FROM alpine:3.7
-LABEL maintainer="Guillaume Kaddouch"
-LABEL twitter="@gkweb76"
+FROM alpine:3.20.2
+#LABEL maintainer="Guillaume Kaddouch"
+LABEL maintainer="alfo1133"
 
 # Install Unbound and setup permissions
-RUN apk add --update --no-cache unbound=1.6.7-r1 && \
+RUN apk add --update --no-cache unbound=1.20.0 && \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/* && \
     cp /usr/share/dnssec-root/trusted-key.key /etc/unbound/ && \
     chown unbound:unbound /usr/share/dnssec-root/trusted-key.key && \
@@ -24,7 +24,7 @@ EXPOSE 53/udp 53/tcp
 VOLUME ["/etc/unbound"]
 
 # Environment variables
-ENV UNBOUND_VERSION 1.6.7-r1
+ENV UNBOUND_VERSION 1.20.0
 
 # Start unbound daemon
 CMD ["unbound", "-c", "/etc/unbound/unbound.conf"]
